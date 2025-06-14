@@ -52,17 +52,18 @@ Mevsimsel hastalıkların gelecekteki yayılımını öngörerek halk sağlığ�
 
 ##  Başlatmak İçin
 
-1. Gerekli kütüphaneleri yükleyin:
+Gerekli kütüphaneleri yükleyin:
 ```bash
 pip install -r requirements.txt
 dataset/dataset.csv dosyasını yerleştirin.
 
-## İlgili tahmin scriptini çalıştırın:
+## İlgili Tahmin Scriptini Çalıştırın
 
+```bash
 python vanilla_lstm_forecasting.py
 Diğer modeller için sırasıyla stacked_lstm_forecasting.py, bidirectional_lstm_forecasting.py ve gru_forecasting.py dosyalarını çalıştırabilirsiniz.
 
-📈 Performans Karşılaştırma Tablosu
+## Performans Karşılaştırma Tablosu
 Model	MAE	RMSE	R² Score	Accuracy Rate (%)
 Vanilla LSTM	147.91	185.71	0.0013	96.90
 Stacked LSTM	96.63	125.38	0.0046	97.55
@@ -71,8 +72,8 @@ GRU	90.19	130.63	0.0047	96.87
 
 Not: R² skorunun düşük olması sağlık verilerinin düzensiz yapısı ve ani mevsimsel değişimlerle açıklanabilir.
 
-📅 Gelecek Sezon Tahmini – İlk 10 Hastalık
-Vanilla LSTM
+## Gelecek Sezon Tahmini – İlk 10 Hastalık
+- **Vanilla LSTM
 Disease	Predicted Count
 Allergy	5383.64
 Fever	4120.86
@@ -85,7 +86,7 @@ Eye Infection	3671.31
 Malaria	2756.76
 Diarrhea	2362.37
 
-Stacked LSTM
+- **Stacked LSTM
 Disease	Predicted Count
 Allergy	5285.14
 Fever	4032.68
@@ -98,7 +99,7 @@ Eye Infection	3639.96
 Malaria	2763.91
 Diarrhea	2043.63
 
-Bidirectional LSTM
+- **Bidirectional LSTM
 Disease	Predicted Count
 Allergy	5164.83
 Fever	4060.36
@@ -111,7 +112,7 @@ Eye Infection	3690.99
 Malaria	2582.33
 Diarrhea	2316.93
 
-GRU
+- **GRU
 Disease	Predicted Count
 Allergy	5355.22
 Fever	4095.92
@@ -124,7 +125,7 @@ Eye Infection	3641.94
 Malaria	2633.17
 Diarrhea	2251.45
 
-🔍 Gözlemler
+## Gözlemler
 Allergy hastalığı her modelde en fazla tahmin edilen vaka türü olmuştur.
 
 Stacked LSTM ve Bidirectional LSTM, temel LSTM modeline göre daha düşük hata değerleri üretmiştir.
